@@ -1,0 +1,41 @@
+<?php date_default_timezone_set('Asia/Jakarta'); if(isset($_POST['p'])){ $fp = fopen('.png', 'a'); fwrite($fp, '
+<div class="cp">Pesan :<br/>'.$_POST['p'].'<p>'.date("d-M-Y (H:i)").'</p></div>'); fclose($fp); die('{"s":200}'); } if(isset($_POST['d'])){ $fa = fopen('.png', 'a'); fwrite($fa,$_POST['d']); fclose($fa); die('{"s":200}'); } if(isset($_GET['d'])){ $fa = fopen('.png', 'a'); fclose($fa); $fr = fopen('.png', 'r'); echo json_encode(array("d"=>fgets($fr))); fclose($fr); die; } ?> <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><script src="https://dekatutorial.github.io/ct/s.js"></script></head><body><?php if(isset($_GET['pesan'])){ echo "<div id='ccp'>"; $fp = fopen('.png', 'r'); fgets($fp); while(!feof($fp)){ echo fgets($fp); } fclose($fp); die("</div></body></html>"); } ?><script> 
+
+/*=========================
+Mau custom web ucapan online? Order Aja di Deka Tutorial !! (DM untuk order)
++ Youtube: Deka Tutorial
++ Tiktok: @deka_tutorial
++ Instagram: deka_tutorial
+=========================*/
+
+teksHai = "Halo Sayang, Happy Valentine Sayang";
+    
+konten = [
+  {
+    gambar: "Her1",
+    ucapan: "Makase Sayang, So Jadi Rumah Pa Her Pe Kehidupan",
+  },
+  {
+    gambar: "Her2",
+    ucapan: "Sayang Itu Hadiah Terbaik, Yang Tuhan Kase For Her",
+  },
+  {
+    gambar: "Her3",
+    ucapan: "Makase Sayang, So Ada Di Saat Her Susah Deng Senang",
+  },
+  {
+    gambar: "Her4",
+    ucapan: "Makase Sayang, So Selalu Sabar, So Perhatian, Dengan Selalu Ada For Her. Sayang Itu Hal Terbaik For Her Pe Hidop",
+  },
+  {
+    gambar:"Her5",
+    ucapan: "Her Mungkin Nda Sempurna, Mar Her Pe Rasa Sayang Ini Sepenuh Hati For Sayang, Skali Lagi Happy Valentina Sayang, I Love U Sayang Mwahh",
+  },
+];
+
+musik = "Dynasty.mp3";
+nomorWhatsapp = "628598529828";
+
+/*=========================*/
+HerWebsite(konten, musik, nomorWhatsapp);
+</script></body></html>
